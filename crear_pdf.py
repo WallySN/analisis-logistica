@@ -21,7 +21,12 @@ graficas = [
     'grafica12_costo_kg_zona.png',
     'grafica13_ranking_transportistas.png',
     'grafica14_curva_abc.png',
-    'grafica15_dashboard_ejecutivo.png'
+    'grafica15_dashboard_ejecutivo.png',
+    'grafica16_mapa_calor.png',
+    'grafica17_boxplot_costos.png',
+    'grafica18_area_apilada.png',
+    'grafica19_burbujas.png',
+    'grafica20_radar_almacenes.png',
 ]
 
 # Verificar que existen
