@@ -20,14 +20,15 @@ st.title("📦 Dashboard de Logística")
 st.markdown("---")
 
 # ============================================
-# CARGAR DATOS
+# CARGAR DATOS (RUTAS CORREGIDAS PARA LA WEB)
 # ============================================
 @st.cache_data
 def cargar_datos():
-    df_ordenes = pd.read_excel('Logistica_Datos.xlsx', sheet_name='Órdenes_Compra')
-    df_inventario = pd.read_excel('Logistica_Datos.xlsx', sheet_name='Inventario_Almacén')
-    df_envios = pd.read_excel('Logistica_Datos.xlsx', sheet_name='Envíos_Entregas')
-    df_rendimiento = pd.read_excel('Logistica_Datos.xlsx', sheet_name='Rendimiento_Transportistas')
+    # Se añade 'data/' al inicio porque los archivos se movieron a esa carpeta
+    df_ordenes = pd.read_excel('data/Logistica_Datos.xlsx', sheet_name='Órdenes_Compra')
+    df_inventario = pd.read_excel('data/Logistica_Datos.xlsx', sheet_name='Inventario_Almacén')
+    df_envios = pd.read_excel('data/Logistica_Datos.xlsx', sheet_name='Envíos_Entregas')
+    df_rendimiento = pd.read_excel('data/Logistica_Datos.xlsx', sheet_name='Rendimiento_Transportistas')
     return df_ordenes, df_inventario, df_envios, df_rendimiento
 
 df_ordenes, df_inventario, df_envios, df_rendimiento = cargar_datos()
